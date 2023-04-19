@@ -34,8 +34,6 @@ const getContentHtml = () => {
   return html;
 };
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    ${getContentHtml()}
-  </div>
-`;
+// document.querySelector('#app').innerHTML = `
+//     ${getContentHtml()}
+// `;
