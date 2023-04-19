@@ -20,19 +20,16 @@ const getRowOfRecipesHtml = (recipes) => {
 	return html;
 };
 
-const getContentHtml = () => {
-  let html = '';
-	const sections = Object.entries(recipeData);
-	for (const section of sections) {
-		const sectionIdCode = section[0];
-		const recipes = section[1];
+let html = '';
+const sections = Object.entries(recipeData);
+for (const section of sections) {
+	const sectionIdCode = section[0];
+	const recipes = section[1];
 
-		const sectionElem = document.querySelector(`#${sectionIdCode}`);
+	const sectionElem = document.querySelector(`#${sectionIdCode}`);
 
-    html +=  getRowOfRecipesHtml(recipes);
-	}
-  return html;
-};
+	sectionElem.innerHTML = getRowOfRecipesHtml(recipes);
+}
 
 // document.querySelector('#app').innerHTML = `
 //     ${getContentHtml()}
