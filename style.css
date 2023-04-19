@@ -1,1 +1,4 @@
-
+img {
+	object-fit: cover;
+	height: 10rem !important;
+}

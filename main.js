@@ -20,7 +20,6 @@ const getRowOfRecipesHtml = (recipes) => {
 	return html;
 };
 
-let html = '';
 const sections = Object.entries(recipeData);
 for (const section of sections) {
 	const sectionIdCode = section[0];
@@ -30,7 +29,3 @@ for (const section of sections) {
 
 	sectionElem.innerHTML = getRowOfRecipesHtml(recipes);
 }
-
-// document.querySelector('#app').innerHTML = `
-//     ${getContentHtml()}
-// `;
